@@ -1,4 +1,4 @@
-# Report WOFF app with kintone
+# Report app with WOFF and kintone
 
 ## Article
 
