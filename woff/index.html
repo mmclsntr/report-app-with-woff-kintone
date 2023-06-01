@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>実績登録</title>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <!-- JS -->
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <!-- 日本語化する場合は下記を追記 -->
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+    </head>
+    <body>
+
+        <div class="container-fluid">
+            <div id="userIdProfileField"></div>
+            <form>
+                <!-- 日付 -->
+                <div class="form-group">
+                    <label for="exampleInputDate">日付</label>
+                    <input type="text"  class="form-control" name="datepicker" id="date">
+                </div>
+                <script>
+                    flatpickr('#date', {
+                        locale     : 'ja',
+                        dateFormat : 'Y-m-d',
+                        defaultDate: new Date()
+                    });
+                </script>
+
+                <!-- 開始時間 -->
+                <div class="form-group">
+                    <label for="exampleInputTime">開始時間</label>
+                    <input type="text"  class="form-control" name="datepicker" id="startTime">
+                </div>
+                <script>
+                    flatpickr('#startTime', {
+                        locale     : 'ja',
+                        enableTime: true,
+                        noCalendar: true,
+                        dateFormat: 'H:i',
+                        time_24hr: true
+                    });
+                </script>
+
+                <!-- 終了時間 -->
+                <div class="form-group">
+                    <label for="exampleInputTime">終了時間</label>
+                    <input type="text"  class="form-control" name="datepicker" id="endTime">
+                </div>
+                <script>
+                    flatpickr('#endTime', {
+                        locale     : 'ja',
+                        enableTime: true,
+                        noCalendar: true,
+                        dateFormat: 'H:i',
+                        time_24hr: true
+                    });
+                </script>
+
+                <!-- 訪問先 -->
+                <div class="form-group">
+                    <label for="exampleInputPlace">訪問先</label>
+                    <input type="text" class="form-control" id="place" aria-describedby="emailHelp" placeholder="訪問先">
+                </div>
+            </form>
+            <button class="btn btn-primary" id="submit">登録</button>
+        </div>
+
+        <!-- WOFF -->
+        <script src="https://static.worksmobile.net/static/wm/woff/edge/3.6/sdk.js"> </script>
+        <!-- axios -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script type="module" src="script.js"></script>
+    </body>
+</html>
