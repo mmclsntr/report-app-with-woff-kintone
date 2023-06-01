@@ -4,7 +4,7 @@
 
 
 ## How to deploy for frontend
-Refer: [woff/README.md](woff/README.md)
+Refer: [woff/README.md](woff)
 
 ## How to deploy for backend
-Refer: [register_kintone/README.md](register_kintone/README.md)
+Refer: [register_kintone/README.md](register_kintone)
