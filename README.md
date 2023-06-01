@@ -2,6 +2,8 @@
 
 ## Article
 
+## Create kintone app
+Use `kintone_app/template.zip` to create kintone app
 
 ## How to deploy for frontend
 Refer: [woff/README.md](woff)
